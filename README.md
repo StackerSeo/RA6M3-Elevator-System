@@ -15,10 +15,9 @@ RA6M3 기반 엘리베이터 시스템: 4층 스위치 입력 및 DC/서보 모�
 - Real-time CAN Monitoring: CAN 통신 프로토콜을 설계하여 PC에서 현재 층, 모터 상태, 입력 로그를 실시간 확인 가능.
 
 ## Tech Stack
-- MCU: Renesas RA6M3 (R7FA6M3AH3CFC)
-- IDE: e2 studio
-- FSP Version: 5.x.x
-- Language: C / Embedded C
+MCU: Renesas RA6M3 (R7FA6M3AH3CFC)
+Development Environment: e2 studio, FSP (Flexible Software Package)
+Language: C / Embedded C
 
 ## System Architecture & Protocol
 
@@ -79,9 +78,9 @@ graph TD
 ### 3. Pin Mapping
 | Category | Component | Pin | Function |
 | :--- | :--- | :--- | :--- |
-| Input | Switches | P100 ~ P103 | GPIO Input (Internal Pull-up) |
+| Input | Switch | P100 ~ P103 | GPIO Input (Internal Pull-up) |
 | Motor | DC Motor | P401, P402 | GPT PWM (Speed/Dir) |
 | Motor | Servo Motor | P403 | GPT PWM (Door Control) |
-| Display | 7-Seg | P200 ~ P210 | GPIO (Dynamic Scanning) |
+| Display | FND(7-Segment) | P200 ~ P210 | GPIO (Dynamic Scanning) |
 | Comm. | CAN | P109, P110 | CAN0 TX/RX (500kbps) |
 | Audio | Speaker | P014 | DAC0 (Arrival Chime) |
