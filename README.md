@@ -79,8 +79,8 @@ graph TD
 | Category | Component | Pin | Function |
 | :--- | :--- | :--- | :--- |
 | Input | Switch | P100 ~ P103 | GPIO Input (Internal Pull-up) |
+| Display | FND(7-Segment) | P200 ~ P210 | GPIO (Dynamic Scanning) |
 | Motor | DC Motor | P401, P402 | GPT PWM (Speed/Dir) |
 | Motor | Servo Motor | P403 | GPT PWM (Door Control) |
-| Display | FND(7-Segment) | P200 ~ P210 | GPIO (Dynamic Scanning) |
-| Comm. | CAN | P109, P110 | CAN0 TX/RX (500kbps) |
 | Audio | Speaker | P014 | DAC0 (Arrival Chime) |
+| Comm. | CAN | P109, P110 | CAN0 TX/RX (500kbps) |
