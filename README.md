@@ -4,8 +4,15 @@ RA6M3 기반 엘리베이터 시스템: 4층 스위치 입력 및 DC/서보 모�
 
 ---
 
-## 1. Project Overview
-본 프로젝트는 임베디드 시스템의 핵심 요소인 입력(Sensor/SW), 출력(Actuator), 통신(CAN)을 유기적으로 결합한 프로젝트입니다. 4개 층의 사용자 호출을 처리하고, 물리적인 승강기 이동 및 도어 개폐를 시뮬레이션하며, 모든 데이터를 실시간으로 외부 서버(PC)에 공유합니다.
+## 1. Key Features
+- Full Interaction: 4개 층 스위치 입력을 통한 개별 호출 및 우선순위 이동 로직 구현.
+- Dual Motor Precision Control:
+  - DC Motor: PWM 제어를 통해 엘리베이터의 부드러운 승강 및 층간 정지 구현.
+  - Servo Motor: 도착 시 엘리베이터 문(Door)의 개폐 동작 제어.
+- Visual & Audio Feedback:
+  - 7-Segment로 현재 위치 표시 및 LED로 호출 대기 상태 가시화.
+  - DAC 스피커를 사용하여 층 도착 시 안내 멜로디 출력.
+- Real-time CAN Monitoring: CAN 통신 프로토콜을 설계하여 PC에서 현재 층, 모터 상태, 입력 로그를 실시간 확인 가능.
 
 ## 2. System Architecture
 
@@ -61,17 +68,7 @@ graph TD
 └── README.md               # Main Description
 ```
 
-## 4. Key Features
-- Full Interaction: 4개 층 스위치 입력을 통한 개별 호출 및 우선순위 이동 로직 구현.
-- Dual Motor Precision Control:
-  - DC Motor: PWM 제어를 통해 엘리베이터의 부드러운 승강 및 층간 정지 구현.
-  - Servo Motor: 도착 시 엘리베이터 문(Door)의 개폐 동작 제어.
-- Visual & Audio Feedback:
-  - 7-Segment로 현재 위치 표시 및 LED로 호출 대기 상태 가시화.
-  - DAC 스피커를 사용하여 층 도착 시 안내 멜로디 출력.
-- Real-time CAN Monitoring: CAN 통신 프로토콜을 설계하여 PC에서 현재 층, 모터 상태, 입력 로그를 실시간 확인 가능.
-
-## 5. Pin Mapping
+## 4. Pin Mapping
 | Category | Component | Pin | Function |
 | :--- | :--- | :--- | :--- |
 | Input | Switches | P100 ~ P103 | GPIO Input (Internal Pull-up) |
